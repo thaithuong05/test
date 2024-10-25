@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Box Example</title>
+    <title>3D Box Rotate on Click</title>
     <style>
         body {
             display: flex;
@@ -23,16 +23,12 @@
             height: 100px;
             background-color: red;
             transform-style: preserve-3d; /* Giữ các thành phần con trong không gian 3D */
-            animation: rotate 5s infinite linear; /* Animation quay */
-            transform-origin: left;
-            transition: transform 1s;
+            transform-origin: left; /* Đặt gốc xoay ở mép trái */
+            transition: transform 0.5s; /* Hiệu ứng chuyển tiếp 0.5 giây */
         }
 
-        .box:hover {
-            transform: rotateY(-120deg); /* Xoay 180 độ khi hover */
-        }
         .box:active {
-            transform: rotateY(-120deg); /* Xoay 180 độ khi hover */
+            transform: rotateY(180deg); /* Xoay 180 độ khi nhấn */
         }
     </style>
 </head>
